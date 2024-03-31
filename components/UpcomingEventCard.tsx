@@ -12,14 +12,16 @@ const UpcomingEventCard = ({ eventName }: { eventName: string }) => {
 	let eventLink = '/';
 
 	return (
-		<div className='border-none rounded-lg overflow-hidden'>
-			<Image
-				src={url}
-				alt={eventName}
-				width={1920}
-				height={1080}
-				className='pb-5 object-cover w-full '
-			/>
+		<div className='border-none p-2 overflow-hidden'>
+			<div className='overflow-hidden rounded-lg'>
+				<Image
+					src={url}
+					alt={eventName}
+					width={1920}
+					height={1080}
+					className='w-full h-full'
+				/>
+			</div>
 			<Link
 				href={eventLink}
 				className='pb-5 transition-all duration-200 float-end flex flex-row gap-2 items-center pr-5 hover:gap-10 hover:text-primary'

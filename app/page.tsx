@@ -22,40 +22,45 @@ const HomePage = () => {
 			<div className='px-10'>
 				<h1
 					data-styled
-					className='primary-gradient py-5 text-center'
+					className='py-5 text-center'
 				>
 					Upcoming Events
 				</h1>
 
-				<Carousel
-					emulateTouch
-					autoPlay
-					axis='horizontal'
-					showArrows={false}
-					showStatus={false}
-					showIndicators={false}
-					showThumbs={false}
-					swipeable
-					transitionTime={500}
-					useKeyboardArrows
-					infiniteLoop
-					interval={2500}
-				>
-					<UpcomingEventCard eventName='Event 1' />
-					<UpcomingEventCard eventName='Event 2' />
-					<UpcomingEventCard eventName='Event 3' />
-					<UpcomingEventCard eventName='Event 4' />
-				</Carousel>
+				<div className='flex justify-center'>
+					<Carousel
+						emulateTouch
+						autoPlay
+						axis='horizontal'
+						showArrows={false}
+						showStatus={false}
+						showIndicators={false}
+						showThumbs={false}
+						swipeable
+						transitionTime={500}
+						useKeyboardArrows
+						infiniteLoop
+						interval={2500}
+						centerMode
+						centerSlidePercentage={70}
+						className='w-[100%] md:w-[75vw]'
+					>
+						<UpcomingEventCard eventName='Event 1' />
+						<UpcomingEventCard eventName='Event 2' />
+						<UpcomingEventCard eventName='Event 3' />
+						<UpcomingEventCard eventName='Event 4' />
+					</Carousel>
+				</div>
 			</div>
 
 			<div className='px-10 pb-10'>
 				<h1
 					data-styled
-					className='primary-gradient py-5 text-center'
+					className='py-5 text-center'
 				>
 					Club Leads
 				</h1>
-				<div className='gap-5 club-leads grid grid-cols-2 relative w-full ov'>
+				<div className='gap-5 club-leads grid grid-cols-2 relative md:w-[50vw] mx-auto'>
 					<div className='p-5 border-none rounded-xl transition-transform duration-100 hover:scale-110 hover:shadow-2xl shadow-primary bg-primary'>
 						<h4
 							data-styled

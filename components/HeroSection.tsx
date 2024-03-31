@@ -4,15 +4,16 @@ import landingImg from '@/images/landing.png';
 
 const HeroSection = () => {
 	return (
-		<div className='flex flex-row justify-around items-center'>
-			<div className='flex-[0.75]'>
-				<h1 className='text-2xl uppercase font-[600] text-secondary'>
-					Software
-				</h1>
-				<h1 className='text-4xl uppercase font-extrabold text-primary'>
+		<div className='flex flex-col md:flex-row justify-around items-center shadow-md shadow-secondary'>
+			<div className='flex-[0.75] hidden md:block'>
+				<h1 className='uppercase font-[600] text-primary'>Software</h1>
+				<h1
+					data-styled
+					className='uppercase font-extrabold text-primary'
+				>
 					Engineering
 				</h1>
-				<h1 className='text-2xl uppercase font-[600] text-secondary'>Club</h1>
+				<h1 className='uppercase font-[600] text-primary'>Club</h1>
 			</div>
 			<Image
 				className='object-contain'
@@ -21,6 +22,12 @@ const HeroSection = () => {
 				width={400}
 				height={400}
 			/>
+			<h3
+				data-styled
+				className='md:hidden text-center'
+			>
+				Software Engineering Club
+			</h3>
 		</div>
 	);
 };
