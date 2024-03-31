@@ -2,32 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@layer base {
+	* {
+		font-size: 16px;
+	}
+
+	:root {
+		--text: #eae8f7;
+		--background: #040308;
+		--primary: #765fd2;
+		--secondary: #822a6f;
+		--accent: #903162;
+	}
+	.dark {
+		--text: #0a0818;
+		--background: #faf9fd;
+		--primary: #765fd2;
+		--secondary: #ddaad2;
+		--accent: #ce6fa0;
+	}
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+a {
+	transition: color 200ms;
+	text-transform: uppercase;
+	font-weight: 500;
+
+	&:hover {
+		color: var(--accent);
+	}
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+h1 {
+	font-size: 3rem;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+h2 {
+	font-size: 2.5rem;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+h3 {
+	font-size: 2rem;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+h4 {
+	font-size: 1.5rem;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+h5 {
+	font-size: 1.25rem;
+	font-weight: 900;
+}
+h6 {
+	font-size: 1rem;
+	font-weight: 900;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+h1[data-styled],
+h2[data-styled],
+h3[data-styled],
+h4[data-styled],
+h5[data-styled],
+h6[data-styled] {
+	background: linear-gradient(
+		90deg,
+		var(--accent) 10%,
+		var(--secondary) 50%,
+		var(--accent) 90%
+	);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-transform: uppercase;
+	font-weight: 900;
 }
