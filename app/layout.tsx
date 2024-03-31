@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-page-custom-font */
 'use client';
 
-import type { Metadata } from 'next';
 import { Rubik } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
