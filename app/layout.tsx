@@ -29,6 +29,26 @@ export default function RootLayout({
 					href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=optional'
 					rel='stylesheet'
 				/>
+				<meta
+					name='viewport'
+					content='width=device-width, initial-scale=1.0'
+				/>
+				<meta
+					name='description'
+					content='Welcome to the official website of the Software Engineering Club of Amity School of Engineering and Technology, Noida.'
+				/>
+				<meta
+					name='keywords'
+					content='software, engineering, college, amity university, amity, amity school of engineering and technology, aset, amity school of engineering and technology, noida, amity noida'
+				/>
+				<meta
+					name='author'
+					content='Aditya Tripathi'
+				/>
+				<meta
+					name='robots'
+					content='index, follow'
+				/>
 			</head>
 			<body
 				ref={bodyRef}
